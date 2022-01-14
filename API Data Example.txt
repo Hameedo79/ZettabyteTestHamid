@@ -1,0 +1,46 @@
+Articles
+
+mutation {
+  createArticle(articleInput:{title:"WWW",text:"haha"}){
+    _id
+  	title
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  updateArticle(id:"61e0be28a3b323e9e74f8f4f",articleInput:{title:"bbb",text:"bbb"}){
+    _id
+  	title
+    text
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  deleteArticle(id:"61e0be28a3b323e9e74f8f4f")
+}
+
+
+
+Comments
+
+mutation {
+  createComment(commentInput:{articleId:"61e0c62e5df7cc64a4348b33",text:"haha"}){
+    _id
+  	text
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  updateComment(id:"61e0cdfd4875b7e077def981",commentInput:{articleId:"61e0c62e5df7cc64a4348b33",text:"jajaja"})
+}
+
+
+mutation {
+  deleteComment(id:"61e0ca767f00696a1a920783",commentInput:{articleId:"61e0c62e5df7cc64a4348b33"})
+}
